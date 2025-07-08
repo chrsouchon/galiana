@@ -12,7 +12,7 @@ else
 {lang = navigator.language.substring(0,2)};
 if (lang == "en") {bla = "Last Updated"}
 else
-if (lang == "fr") {bla = "Dernière MAJ"}
+if (lang == "fr") {bla = "DerniÃ¨re MAJ"}
 else
 if (lang == "de") {bla = "Zuletzt geaendert"};
 
