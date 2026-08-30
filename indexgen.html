@@ -1,833 +1,668 @@
-<!DOCTYPE html>
-
-<html lang="fr">
-<head>
-<meta charset="utf-8" content="text/html" http-equiv="Content-Type"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Michel Galiana Index général</title>
-<meta content="Christian Souchon" name="author"/>
-<meta content="Liste de poèmes de Michel Galiana traduits par Christian Souchon" name="description"/>
-<meta content="Michel Galiana, Christian Souchon, poésie, poèmes, hermétisme, alchimie" name="keywords"/>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//FR">
+<html lang=FR> 
+<html>
+<head><title>Michel Galiana Index général</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="expires" content="86400"> 
+<META Name="author" content="Christian Souchon">
+<META Name="description" content="Liste de poèmes de Michel Gliana traduits par Christian Souchon">
+<META Name="keywords" content="Michel Galiana, Christian Souchon, poésie, poèmes, hrmétisme, alchimie">
+<LINK href="souchon.css" rel=stylesheet title=style type=text/css>
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: #000000 url('cahiern.jpg') fixed;
-            color: white;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 10px;
-        }
-        
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 2.2em;
-            color: #ffffff;
-        }
-        
-        h2 {
-            text-align: center;
-            margin: 10px 0 30px 0;
-            font-size: 1.8em;
-            color: #cccccc;
-        }
-        
-        .bio-section {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .bio-section img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .book-item {
-            text-align: center;
-            padding: 15px;
-            background: rgba(0, 0, 255, 0.2);
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .book-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .book-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        
-        .poem-section {
-            margin: 50px 0;
-        }
-        
-        .section-divider {
-            width: 100%;
-            height: 2px;
-            background: #0000ff;
-            margin: 30px 0;
-        }
-        
-        .bilingual-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
-            background: rgba(0, 0, 255, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .french-column, .english-column {
-            padding: 10px;
-        }
-        
-        .poem-list {
-            list-style: none;
-        }
-        
-        .poem-list li {
-            margin: 8px 0;
-            padding: 5px 0;
-        }
-        
-        .poem-list a {
-            color: white;
-            text-decoration: none;
-            display: inline-block;
-            padding: 3px 0;
-            transition: color 0.3s ease;
-        }
-        
-        .poem-list a:hover {
-            color: #ffff00;
-            text-decoration: underline;
-        }
-        
-        .poem-list a:visited {
-            color: #ffff99;
-        }
-        
-        .subsection-title {
-            font-weight: bold;
-            margin: 15px 0 10px 0;
-            color: #cccccc;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
-        
-        .search-container {
-            background: rgba(0, 0, 255, 0.2);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .search-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .search-form input[type="text"] {
-            padding: 8px 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            min-width: 200px;
-        }
-        
-        .search-form input[type="submit"] {
-            padding: 8px 16px;
-            background: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background 0.3s ease;
-        }
-        
-        .search-form input[type="submit"]:hover {
-            background: #0052a3;
-        }
-        
-        .footer-section {
-            text-align: center;
-            margin: 40px 0 20px 0;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-        }
-        
-        .external-links {
-            margin: 20px 0;
-        }
-        
-        .external-links a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-            padding: 5px;
-            transition: color 0.3s ease;
-        }
-        
-        .external-links a:hover {
-            color: #ffff00;
-            text-decoration: underline;
-        }
-        
-        .home-link {
-            margin: 20px 0;
-        }
-        
-        .home-link img {
-            max-width: 50px;
-            height: auto;
-        }
-        
-        .visitor-counter {
-            font-size: 0.8em;
-            color: #cccccc;
-            margin: 10px 0;
-        }
-        
-        .note-text {
-            font-style: italic;
-            color: #cccccc;
-            font-size: 0.9em;
-            margin: 10px 0;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .bilingual-container {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            
-            .books-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 15px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            h2 {
-                font-size: 1.4em;
-            }
-            
-            .search-form {
-                flex-direction: column;
-            }
-            
-            .search-form input[type="text"] {
-                min-width: 250px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            
-            .container {
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 1.5em;
-            }
-            
-            h2 {
-                font-size: 1.2em;
-            }
-            
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-<link href="https://chrsouchon.fr/logo/goelan.jpg" rel="icon" type="image/x-icon"/></head>
-<body>
-<div class="container">
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial";}
+a:link, span.MsoHyperlink
+	{color:white;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:yellow;
+	text-decoration:underline;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+<body bgProperties=fixed bgcolor=black background="cahiern.jpg" text=white><font face="arial">
+<center><br><br><br<<br>
 <h1>Poèmes de Michel Galiana (1933-1999)</h1>
 <h2>Poems by Michel Galiana (1933-1999)</h2>
-<div class="bio-section">
-<a href="biograph.html">Notice biographique</a><p>
-<img alt="Michel Galiana à l'âge de 20 ans - Photo: Karin Voigt" src="michel1.jpg"/></p>
-</div>
-<div class="books-section">
-<p style="text-align: center; margin: 20px 0;">
-                Paperbacks available at - Ouvrages brochés sur AMAZON.COM:
-            </p>
-<div class="books-grid">
-<div class="book-item">
-<strong><a href="http://www.amazon.com/Mythologies-Fighting-Hercules-Triumph-Hermes/dp/1434400964/ref=sr_1_1/002-1861054-9684855?ie=UTF8&amp;s=books&amp;qid=1181489005&amp;sr=1-1">Mythologies</a></strong><p>
-<a href="https://www.amazon.fr/Mythologies-Fighting-Hercules-Triumph-Hermes/dp/1434400964">
-<img alt="Mythologies book cover" src="mytho.jpg"/>
-</a>
-</div>
-<div class="book-item">
-<strong><a href="http://www.amazon.com/Dream-Orchard-Michel-Galiana/dp/143440093X/ref=sr_1_16/002-9049574-9462427?ie=UTF8&amp;s=books&amp;qid=1181427763&amp;sr=8-16">Dream in the Orchard</a></strong><p></p>
-<a href="http://www.amazon.com/Dream-Orchard-Michel-Galiana/dp/143440093X/ref=sr_1_16/002-9049574-9462427?ie=UTF8&amp;s=books&amp;qid=1181427763&amp;sr=8-16">
-<img alt="Dream in the Orchard book cover" src="dream.jpg"/>
-</a>
-</div>
-<div class="book-item">
-<strong><a href="http://www.amazon.com/Milestones-Milliaires-1978-1989-Michel-GALIANA/dp/1434473759/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1214969606&amp;sr=1-1">Milestones</a></strong><p></p>
-<a href="https://www.payot.ch/Detail/milestones-michel_galiana-9781434473752?cId=1">
-<img alt="Milestones book cover" src="mileston.jpg"/>
-</a>
-</div>
-<div class="book-item">
-<strong><a href="https://www.amazon.fr/Voyages-Maturity-Later-Works-Selected/dp/1434457419">Voyages</a></strong><p></p>
-<a href="https://www.amazon.fr/Voyages-Maturity-Later-Works-Selected/dp/1434457419">
-<img alt="Voyages book cover" src="voyages.jpg"/>
-</a>
-</div>
-</div>
-<p style="text-align: center; margin: 20px 0;">
-                (Ou copiez-collez ces liens dans votre navigateur - Or copy-paste above links in your browser)
-            </p>
-</div>
-<div class="poem-section">
+<br><br><br><br>
+<a href="biograph.html"> Notice biographique</a><br><br>
+<img src="michel1.jpg" width=200 alt="'Michel Galiana à l'age de 20 ans'-Photo:Karin Voigt"><p>
+
+<br>
+Paperbacks available at - Ouvrages brochés sur AMAZON.COM:<br>
+<Table cellpadding=4 width=100%>
+
+<tr>
+<td width=25% valign=top align=center><strong>
+<a href="http://www.amazon.com/Mythologies-Fighting-Hercules-Triumph-Hermes/dp/1434400964/ref=sr_1_1/002-1861054-9684855?ie=UTF8&s=books&qid=1181489005&sr=1-1">Mythologies </a><br></td>
+
+<td width=25% valign=top align=center><strong>
+<a href="http://www.amazon.com/Dream-Orchard-Michel-Galiana/dp/143440093X/ref=sr_1_16/002-9049574-9462427?ie=UTF8&s=books&qid=1181427763&sr=8-16">Dream in the Orchard</a>
+<br<</td>
+
+<td width=25% valign=top align=center><strong>
+<a href="http://www.amazon.com/Milestones-Milliaires-1978-1989-Michel-GALIANA/dp/1434473759/ref=sr_1_1?ie=UTF8&s=books&qid=1214969606&sr=1-1">Milestones</a><br>
+</td>
+
+<td width=25% valign=top align=center><strong>
+<a href="https://www.amazon.fr/Voyages-Maturity-Later-Works-Selected/dp/1434457419">Voyages</a><br>
+</td>
+</tr>
+<tr>
+<td width=25% valign=top align=center>
+<a href="https://www.amazon.fr/Mythologies-Fighting-Hercules-Triumph-Hermes/dp/1434400964"><img src="mytho.jpg"></a></td>
+
+<td width=25% valign=top align=center>
+<a href="http://www.amazon.com/Dream-Orchard-Michel-Galiana/dp/143440093X/ref=sr_1_16/002-9049574-9462427?ie=UTF8&s=books&qid=1181427763&sr=8-16"><img src="dream.jpg"></a></td>
+
+<td width=25% valign=top align=center><strong>
+<a href="https://www.payot.ch/Detail/milestones-michel_galiana-9781434473752?cId=1"><img src="mileston.jpg"> </a></td>
+
+<td width=25% valign=top align=center><strong>
+<a href="https://www.amazon.fr/Voyages-Maturity-Later-Works-Selected/dp/1434457419"><img src="voyages.jpg"></a></td<>
+</tr>
+
+</table><br><br>
+
+(Ou copiez-collez ces liens dans votre navigateur - Or copy-paste above links in your browser) <br><br>
+
 <h1>Palais Galiana</h1>
-<h2>Galiana's Palace</h2>
-<div class="bilingual-container">
-<div class="french-column">
-<strong><a href="pringali.html">Palais Galiana</a></strong>
-</div>
-<div class="english-column">
-<strong><a href="pringali.html">Galiana's Palace</a></strong>
-</div>
-</div>
-</div>
-<div class="section-divider"></div>
-<div class="poem-section">
+<h2> Galiana's Palace</h2>
+<Table border width=100% cellpadding=4>
+<tr>
+<td bgcolor="blue" width=50% valign=top><p class=norme><strong>
+<a href="pringali.html">Palais Galiana</a>
+</td>
+<td width=50% bgcolor="blue" valign=top><p class=norme><strong>
+<a href="pringali.html"> Galiana's Palace</a>
+</td>
+</tr>
+</table>
+<img src="bar_blue.gif"><br>
+<br>
+
 <h1>Le Songe du Verger</h1>
-<h2>The Dream in the Orchard</h2>
-<div class="bilingual-container">
-<div class="french-column">
-<ul class="poem-list">
-<li><a href="verger.html">I Le songe du verger</a></li>
-<li><a href="prince.html">II Le Prince *</a></li>
-<li><a href="potier.html">III Potier d'étoiles</a></li>
-<li><a href="halte.html">IV La halte dans la montagne</a></li>
-<li><a href="porte.html">V La porte</a></li>
-<li><a href="veilleur.html">VI Le veilleur</a></li>
-<li class="subsection-title">Sous le signe de l'épervier</li>
-<li><a href="epervier.html">VII L'épervier</a></li>
-<li><a href="pierre.html">VIII La pierre de raison</a></li>
-<li><a href="ombre.html">IX Le plaidoyer de l'ombre</a></li>
-<li><a href="hesperid.html">X-1 Hespérides</a></li>
-<li><a href="madrigal.html">X-2 Madrigal de printemps</a></li>
-<li><a href="hercule.html">X-3 Hercule au Jardin</a></li>
-<li><a href="graine.html">X-4 Jardins</a> *</li>
-<li><a href="hermtrio.html">XI-1 Hermès triomphant</a></li>
-<li><a href="tentatio.html">XI-2 Tentation</a> *</li>
-<li><a href="faussair.html">XI-3 Le faussaire</a> *</li>
-<li><a href="foret.html">XI-4 La forêt</a> *</li>
-<li><a href="nautonie.html">XI-5 Le nautonier</a> *</li>
-<li class="subsection-title">Sous le signe de l'araignée</li>
-<li><a href="spider.html">XII Aragne</a></li>
-<li><a href="royaume.html">XIII Royaume Périlleux</a></li>
-<li><a href="argonaut.html">XIV Argonaute</a> *</li>
-<li><a href="vents.html">XV Le vent qui se lève</a> *</li>
-<li><a href="absence.html">XVI Absence</a> *</li>
-<li><a href="parque.html">XVII La tisseuse de destin</a> *</li>
-<li><a href="oiseau.html">XVIII L'oiseau migrateur</a> *</li>
-<li><a href="ile19.html">XIX L'île</a></li>
-<li><a href="deadgir1.html">XX-1 La Fausse morte 1</a></li>
-<li><a href="deadgir2.html">XX-2 La Fausse morte 2</a></li>
-<li><a href="deadgir3.html">XX-3 La Fausse morte 3</a></li>
-<li><a href="funeral.html">XXI Les funérailles de l'amour</a></li>
-<li><a href="heureble.html">XXII L'heure blême</a></li>
-<li class="subsection-title">Sous le signe du chat</li>
-<li><a href="chat2301.html">XXIII-1 Le chat et l'oiseau</a> *</li>
-<li><a href="hallali.html">XXIII-2 Le chat sauvage</a> *</li>
-<li><a href="chatdort.html">XXIII-3 Chat au repos</a> *</li>
-<li><a href="chatnuit.html">XXIII-4 Chat la nuit</a> *</li>
-<li><a href="gardener.html">XXIV La fille du jardinier</a></li>
-<li><a href="cerf.html">XXV La nuit retrouvée</a></li>
-<li><a href="cristal.html">XXVI Cristal d'oiseau</a></li>
-<li><a href="hurqalya.html">XXVII Hurqalya</a></li>
-<li><a href="hesperus.html">XXVIII Hesperus</a></li>
-<li><a href="changuet.html">XXIX Une chanson de guetteur</a></li>
-<li><a href="channuit.html">XXX Etoile</a>*</li>
-<li><a href="lumiere.html">XXXI Lumière noire</a></li>
-<li><a href="chanson.html">XXXII Chanson</a></li>
-<li><a href="hermparl.html">XXXIII Hermès parle</a></li>
-<li><a href="jarnuit.html">XXXIV Le Jardin sous la nuit</a></li>
-<li><a href="stele.html">Stèle</a></li>
-<li class="note-text">* Titres ajoutés par le traducteur</li>
-</ul>
-</div>
-<div class="english-column">
-<ul class="poem-list">
-<li><a href="verger.html">I The dream in the Orchard</a></li>
-<li><a href="prince.html">II The Prince *</a></li>
-<li><a href="potier.html">III Potter of Stars</a></li>
-<li><a href="halte.html">IV The Stop in the Mountain</a></li>
-<li><a href="porte.html">V The Gate</a></li>
-<li><a href="veilleur.html">VI The Look-Out</a></li>
-<li class="subsection-title">Under the Sign of the Hawk</li>
-<li><a href="epervier.html">VII The Hawk</a></li>
-<li><a href="pierre.html">VIII The Stone of Wisdom</a></li>
-<li><a href="ombre.html">IX The Plea of Darkness</a></li>
-<li><a href="hesperid.html">X-1 Hesperides</a></li>
-<li><a href="madrigal.html">X-2 Spring Madrigal</a></li>
-<li><a href="hercule.html">X-3 Hercules in the Garden</a></li>
-<li><a href="graine.html">X-4 Gardens</a> *</li>
-<li><a href="hermtrio.html">XI-1 The Triumph of Hermes</a></li>
-<li><a href="tentatio.html">XI-2 Temptation</a> *</li>
-<li><a href="faussair.html">XI-3 The Forger</a> *</li>
-<li><a href="foret.html">XI-4 The Forest</a> *</li>
-<li><a href="nautonie.html">XI-5 The Helmsman</a> *</li>
-<li class="subsection-title">Under the Sign of the Spider</li>
-<li><a href="spider.html">XII Spider</a></li>
-<li><a href="royaume.html">XIII Perilous Realm</a></li>
-<li><a href="argonaut.html">XIV Argonaut</a> *</li>
-<li><a href="vents.html">XV Rising Wind</a> *</li>
-<li><a href="absence.html">XVI Absence</a> *</li>
-<li><a href="parque.html">XVII The Weaver of Fate</a> *</li>
-<li><a href="oiseau.html">XVIII The Migrant Bird</a> *</li>
-<li><a href="ile19.html">XIX The Isle</a></li>
-<li><a href="deadgir1.html">XX-1 The Seemingly Dead Girl 1</a></li>
-<li><a href="deadgir2.html">XX-2 The Seemingly Dead Girl 2</a></li>
-<li><a href="deadgir3.html">XX-3 The Seemingly Dead Girl 3</a></li>
-<li><a href="funeral.html">XXI The Funeral of Love</a></li>
-<li><a href="heureble.html">XXII The Last Hour</a></li>
-<li class="subsection-title">Under the Sign of the Cat</li>
-<li><a href="chat2301.html">XXIII-1 Cat and Bird</a> *</li>
-<li><a href="hallali.html">XXIII-2 Wild Cat</a> *</li>
-<li><a href="chatdort.html">XXIII-3 Cat at rest</a> *</li>
-<li><a href="chatnuit.html">XXIII-4 Cat at night</a> *</li>
-<li><a href="gardener.html">XXIV The Gardener's Daughter</a></li>
-<li><a href="cerf.html">XXV Night Recovered</a></li>
-<li><a href="cristal.html">XXVI Crystal of Bird</a></li>
-<li><a href="hurqalya.html">XXVII Hurqalya</a></li>
-<li><a href="hesperus.html">XXVIII Hesperus</a></li>
-<li><a href="changuet.html">XXIX A Look-Out's Song</a></li>
-<li><a href="channuit.html">XXX A Star</a>*</li>
-<li><a href="lumiere.html">XXXI Black Light</a></li>
-<li><a href="chanson.html">XXXII Song</a></li>
-<li><a href="hermparl.html">XXXIII Hermes Speaks</a></li>
-<li><a href="jarnuit.html">XXXIV Garden Under Night Sky</a></li>
-<li><a href="stele.html">Inscription on a Stone Slab</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section-divider"></div>
-<div class="poem-section">
-<h1>D'un livre d'heures</h1>
+<h2> The Dream in the Orchard</h2>
+
+<Table border width=100% cellpadding=4>
+<tr>
+<td bgcolor="blue" width=50% valign=top><strong>
+<br>
+<a href=Songepres.html>Présentation de l'oeuvre</a><br>
+<br>
+<a href=Fondamch.html>1° PRINCIPES ET EXPERIENCES *</a><br>
+<br>
+<a href="verger.html">I Le songe du verger</a><br>
+<a href="prince.html">II Le Prince *</a><br>
+<a href="potier.html">III Potier d'étoiles</a><br>
+<a href="halte.html">IV La halte dans la montagne</a><br>
+<a href="porte.html">V La porte</a><br>
+<a href="veilleur.html">VI Le veilleur</a><br>
+<br>
+<a href=Epervch.html>2° SOUS LE SIGNE DE L'EPERVIER</a><br>
+<br>
+<a href="epervier.html">VII L'épervier</a><br>
+<a href="pierre.html">VIII La pierre de raison</a><br>
+<a href="ombre.html">IX Le plaidoyer de l'ombre</a><br>
+<br>
+<a href=Hesperch.html>3° HESPERIDES</a><br>
+<br>
+<a href="hesperid.html">X-1 Hespérides</a><br>
+<a href="madrigal.html">X-2 Madrigal de printemps</a><br>
+<a href="hercule.html">X-3 Hercule au Jardin</a><br>
+<a href="graine.html">X-4 Jardins</a> *<br>
+<br>
+<a href=Hermesch.html>4° HERMES TRIOMPHANT</a><br>
+<br>
+<a href="hermtrio.html">XI-1 Hermès triomphant</a><br>
+<a href="tentatio.html">XI-2 Tentation</a> *<br>
+<a href="faussair.html">XI-3 Le faussaire</a> *<br>
+<a href="foret.html">XI-4 La forêt</a> *<br>
+<a href="nautonie.html">XI-5 Le nautonier</a> *<br>
+<br>
+<a href=Araignch.html>5° SOUS LE SIGNE DE L'ARAIGNEE</a><br>
+<br>
+<a href="spider.html">XII Aragne</a><br>
+<a href="royaume.html">XIII Royaume Périlleux</a><br>
+<a href="argonaut.html">XIV Argonaute</a> *<br>
+<a href="vents.html">XV Le vent qui se lève</a> *<br>
+<a href="absence.html">XVI Absence</a> *<br>
+<a href="parque.html">XVII La tisseuse de destin</a> *<br>
+<a href="oiseau.html">XVIII L'oiseau migrateur</a> *<br>
+<br>
+<a href=Erosthan.html>6° EROS ET THANATOS *</a><br>
+<br>
+<a href="ile19.html">XIX L'île</a><br>
+<a href="deadgir1.html">XX-1 La Fausse morte 1</a><br>
+<a href="deadgir2.html">XX-2 La Fausse morte 2</a><br>
+<a href="deadgir3.html">XX-3 La Fausse morte 3</a><br>
+<a href="funeral.html">XXI Les funérailles de l'amour</a><br>
+<a href="heureble.html">XXII L'heure blême</a><br>
+<br>
+<a href=Chatchap.html>7° SOUS LE SIGNE DU CHAT</a><br>
+<br>
+<a href="chat2301.html">XXIII-1 Le chat et l'oiseau</a> *<br>
+<a href="hallali.html">XXIII-2 Le chat sauvage</a> *<br>
+<a href="chatdort.html">XXIII-3 Chat au repos</a> *<br>
+<a href="chatnuit.html">XXIII-4 Chat la nuit</a> *<br>
+<br>
+<a href=Nuitprop.html>8° LA NUIT PROPICE *</a><br>
+<br>
+<a href="gardener.html">XXIV La fille du jardinier</a><br>
+<a href="cerf.html">XXV La nuit retrouvée</a><br>
+<a href="cristal.html">XXVI Cristal d'oiseau</a><br>
+<a href="hurqalya.html">XXVII Hurqalya</a><br> 
+<a href="hesperus.html">XXVIII Hesperus</a><br>
+<a href="changuet.html">XXIX Une chanson de guetteur</a><br>
+<a href="channuit.html">XXX Etoile</a>*<br>
+<a href="lumiere.html">XXXI Lumière noire</a><br>
+<a href="chanson.html">XXXII Chanson</a><br>
+<a href="hermparl.html">XXXIII Hermès parle</a><br>
+<a href="jarnuit.html">XXXIV Le Jardin sous la nuit</a><br>
+<br>
+<a href="stele.html">Stèle</a><br>
+<br>
+<i>* Titre ajouté par le traducteur<br>
+ (Pub. mars 1990)</i><br>
+</td>
+
+<td width=50% bgcolor="blue" valign=top><strong>
+<br>
+<a href=Songepres.html>Overview of the work</a><br>
+<br>
+<a href=Fondamch.html>1° FUNDAMENTALS AND EXPERIENCES *</a><br>
+<br>
+<a href="verger.html">I The dream in the Orchard</a><br>
+<a href="prince.html">II The Prince *</a><br>
+<a href="potier.html">III Potter of Stars</a><br>
+<a href="halte.html">IV The Stop in the Mountain</a><br>
+<a href="porte.html">V The Gate</a><br>
+<a href="veilleur.html">VI The Look-Out</a><br>
+<br>
+<a href=Epervch.html>2° UNDER THE SIGN OF THE SPARROWHAWK</a><br>
+<br>
+<a href="epervier.html">VII The Hawk</a><br>
+<a href="pierre.html">VIII The Stone of Wisdom</a><br>
+<a href="ombre.html">IX The Plea of Darkness</a><br>
+<br>
+<a href=Hesperch.html>3° HESPERIDES</a><br>
+<br>
+<a href="hesperid.html">X-1 Hesperides</a><br>
+<a href="madrigal.html">X-2 Spring Madrigal</a><br>
+<a href="hercule.html">X-3 Hercules in the Garden</a><br>
+<a href="graine.html">X-4 Gardens</a> *<br>
+<br>
+<a href=Hermesch.html>4° HERMES TRIUMPHANT</a><br>
+<br>
+<a href="hermtrio.html">XI-1 The Triumph of Hermes</a><br>
+<a href="tentatio.html">XI-2 Temptation</a> *<br>
+<a href="faussair.html">XI-3 The Forger</a> *<br>
+<a href="foret.html">XI-4 The Forest</a> *<br>
+<a href="nautonie.html">XI-5 The Helmsman</a> *<br>
+<br>
+<a href=Araignch.html>5° UNDER THE SIGN OF THE SPIDER</a><br>
+<br>
+<a href="spider.html">XII Spider</a><br>
+<a href="royaume.html">XIII Perilous Realm</a><br>
+<a href="argonaut.html">XIV Argonaut</a> *<br>
+<a href="vents.html">XV Rising Wind</a> *<br>
+<a href="absence.html">XVI Absence</a> *<br>
+<a href="parque.html">XVII The Weaver of Fate</a> *<br>
+<a href="oiseau.html">XVIII The Migrant Bird</a> *<br>
+<br>
+<a href=Erosthan.html>6° EROS AND THANATOS *</a><br>
+<br>
+<a href="ile19.html">XIX The Isle</a><br>
+<a href="deadgir1.html">XX-1 The Seemingly Dead Girl 1</a><br>
+<a href="deadgir2.html">XX-2 The Seemingly Dead Girl 2</a><br>
+<a href="deadgir3.html">XX-3 The Seemingly Dead Girl 3</a><br>
+<a href="funeral.html">XXI The Funeral of Love</a><br>
+<a href="heureble.html">XXII The Last Hour</a><br>
+<br>
+<a href=Chatchap.html>7° UNDER THE SIGN OF THE CAT</a><br>
+<br>
+<a href="chat2301.html">XXIII-1 Cat and Bird</a> *<br>
+<a href="hallali.html">XXIII-2 Wild Cat</a> *<br>
+<a href="chatdort.html">XXIII-3 Cat at rest</a> *<br>
+<a href="chatnuit.html">XXIII-4 Cat at night</a> *<br>
+<br>
+<a href=Nuitprop.html>8° PROPITIOUS NIGHT *</a><br>
+<br>
+<a href="gardener.html">XXIV The Gardener's Daughter</a><br>
+<a href="cerf.html">XXV Night Recovered</a><br>
+<a href="cristal.html">XXVI Crystal of Bird</a><br>
+<a href="hurqalya.html">XXVII Hurqalya</a><br> 
+<a href="hesperus.html">XXVIII Hesperus</a><br>
+<a href="changuet.html">XXIX A Look-Out's Song</a><br>
+<a href="channuit.html">XXX A Star</a>*<br>
+<a href="lumiere.html">XXXI Black Light</a><br>
+<a href="chanson.html">XXXII Song</a><br>
+<a href="hermparl.html">XXXIII Hermes Speaks</a><br>
+<a href="jarnuit.html">XXXIV Garden Under Night Sky</a><br>
+<br>
+<a href="stele.html">Stele</a><br>
+<br>
+<i>* Title added by the translator<br>
+ (Published in March 1990)</i>
+
+</td>
+</tr>
+</table>
+<img src="bar_blue.gif"><br>
+<br>
+<center><h1>D'un livre d'heures</h1>
+
 <h2>Out of a Book of Hours</h2>
-<div class="bilingual-container">
-<div class="french-column">
-<ul class="poem-list">
-<li><a href="midi.html">Midi en forêt</a></li>
-<li><a href="madrid.html">Un square à Madrid</a></li>
-<li><a href="scythes.html">Aux Scythes</a></li>
-<li><a href="praibrok.html">L'Amérique qui se dédit</a></li>
-<li><a href="grive.html">La grive d'hiver</a></li>
-<li><a href="lutteur.html">Le lutteur*</a></li>
-<li><a href="elegie.html">Elégie d'hiver</a></li>
-<li><a href="exvoto.html">Ex Voto</a></li>
-<li><a href="jairenco.html">Rencontre*</a></li>
-<li><a href="tage.html">Chansons du Tage</a></li>
-<li><a href="chanson5.html">Vent et flamme*</a></li>
-<li><a href="chanson6.html">Assaut*</a></li>
-<li class="note-text">* Titres ajoutés par le traducteur</li>
-</ul>
-</div>
-<div class="english-column">
-<ul class="poem-list">
-<li><a href="midi.html">Midday in the Wood</a></li>
-<li><a href="madrid.html">A public garden in Madrid</a></li>
-<li><a href="scythes.html">To the Scythians</a></li>
-<li><a href="praibrok.html">The broken promise of America</a></li>
-<li><a href="grive.html">The Winter Thrush</a></li>
-<li><a href="lutteur.html">The Wrestler*</a></li>
-<li><a href="elegie.html">Winter Elegy</a></li>
-<li><a href="exvoto.html">Ex Voto</a></li>
-<li><a href="jairenco.html">Encounter*</a></li>
-<li><a href="tage.html">Songs of the Tagus</a></li>
-<li><a href="chanson5.html">Wind and Flame*</a></li>
-<li><a href="chanson6.html">The Assault*</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section-divider"></div>
-<div class="poem-section">
+
+
+<Table border width=100% cellpadding=4>
+<tr>
+<td bgcolor="blue" width=50% valign=top><strong>
+<a href="midi.html">Midi en forêt (7 mai 1960)</a><br>
+<a href="madrid.html">Un square à Madrid (17 mars 1986)</a><br>
+<a href="scythes.html">Aux Scythes (26-29 août 1986)</a><br>
+<a href="praibrok.html">L'Amérique qui se dédit (A. Luterman, 20 janvier 2025)</a><br>
+<a href="grive.html">La grive d'hiver (2 janv. 1992)</a><br>
+<a href="lutteur.html">Le lutteur*(16-17 août 1968)</a><br>
+<a href="elegie.html">Elégie d'hiver (14-15 février 1983)</a><br>
+<a href="exvoto.html">Ex Voto (Juin 1953)</a><br>
+<a href="jairenco.html">Rencontre* (27 juin 1964)</a><br>
+<a href="tage.html">Chansons du Tage I-IV (24-25 juin 1966)</a><br>
+<a href="chanson5.html">Vent et flamme* (2 juin 1978)</a><br>
+<a href="chanson6.html">Assaut* (24-28 décembre 1987)</a><br>
+<br>
+* <i>Titres ajoutés par le traducteur<br>
+ (Pub. décembre 1992)</i>
+</td>
+
+<td bgcolor="blue" width=50% valign=top><strong>
+<a href="midi.html">Midday in the Wood (May 7, 1960)</a><br>
+<a href="madrid.html">A public garden in Madrid (March 17, 1986)</a><br>
+<a href="scythes.html">To the Scythians (August 26-29, 1986)</a><br>
+<a href="praibrok.html">The broken promise of America (A Luterman January 20, 2025)</a><br>
+<a href="grive.html">The Winter Thrush (January 2, 1992)</a><br>
+<a href="lutteur.html">The Wrestler* (August 16-17, 1968)</a> *<br>
+<a href="elegie.html">Winter Elegy (February 14-15, 1983)</a><br>
+<a href="exvoto.html">Ex Voto (June 1953)</a><br>
+<a href="jairenco.html">Encounter* (June 27, 1964)</a><br>
+<a href="tage.html">Songs of the Tagus I-IV (June 24-25, 1966)</a><br>
+<a href="chanson5.html">Wind and Flame* (June 2, 1978)</a><br>
+<a href="chanson6.html">The Assault* (December 24-28, 1987)</a><br>
+<br>
+<i>* Titles added by the translator<br>
+(Published in December 1992)</i>
+</td></tr>
+</table>
+<img src="bar_blue.gif"><br>
+<br>
+
 <h1>Cinq recueils de poèmes</h1>
 <h2>Five Collections of Poems</h2>
-<div class="bilingual-container">
-<div class="french-column">
-<ul class="poem-list">
-<li><a href="travaux/intro.html">Hercule combattant (Zodiaque alchimique)</a></li>
-<li><a href="prague/prague.html">Sept pages d'un livre de pierre (Souvenirs de Prague)</a></li>
-<li><a href="intrherm.html">Hermès triomphant</a></li>
-<li><a href="murintro.html">Chanson pour la murène</a></li>
-<li><a href="sirene1.html">Chansons de la Sirène</a></li>
-</ul>
-</div>
-<div class="english-column">
-<ul class="poem-list">
-<li><a href="travaux/intro.html">Fighting Hercules (An alchemical zodiac)</a></li>
-<li><a href="prague/prague.html">Seven Pages out of a Stone Book (Memories of Prague)</a></li>
-<li><a href="intrherm.html">The Triumph of Hermes</a></li>
-<li><a href="murintro.html">Song for a Moray Eel</a></li>
-<li><a href="sirene1.html">The Mermaid's songs</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section-divider"></div>
-<div class="poem-section">
+<Table border width=100% cellpadding=4>
+<tr>
+<td bgcolor="blue" width=50% valign=top><strong>
+<a href="./travaux/intro.html">Hercule combattant (Zodiaque alchimique) *</a><br>
+<a href="./prague/prague.html">Sept pages d'un livre de pierre (Suite Pragoise) *</a><br>
+<a href="intrherm.html">Hermès triomphant *</a><br>
+<a href="murintro.html">Chanson pour la murène</a><br>
+<a href="Sirenpres.html">Chansons de la Sirène</a><br>
+<br>
+<i>* Tapuscrit 9570 du 10.01.1989</i>
+</td>
+<td bgcolor="blue" width=50% valign=top><strong>
+<a href="./travaux/intro.html">Fighting Hercules (An alchemical zodiac) *</a><br>
+<a href="./prague/prague.html">Seven Pages out of a Stone Book (Prague Suite) *</a><br>
+<a href="intrherm.html">The Triumph of Hermes *</a><br>
+<a href="murintro.html">Song for a Moray Eel</a><br>
+<a href="Sirenpres.html">The Mermaid's songs</a><br>
+<br>
+<i>* Typescript 9570 dated January 10, 1989</i>
+</td>
+</tr>
+</table>
+<img src="bar_blue.gif"><br>
+<br>
 <h1>Milliaires</h1>
-<h2>Milliary Columns</h2>
-<div class="bilingual-container">
-<div class="french-column">
-<ul class="poem-list">
-<li><a href="mathiver.html">I Matin d'hiver 1989</a></li>
-<li><a href="foresmar.html">II Forêt smaragdine 1990</a></li>
-<li><a href="geode.html">III Géode 1990</a></li>
-<li><a href="crucifix.html">IV Crucifixion 1990</a></li>
-<li><a href="corpcris.html">V Corps de cristal 1990</a></li>
-<li><a href="corpeben.html">VI Corps d'ébène 1990</a></li>
-<li><a href="ludovicu.html">VII Ludovicus Magnus 1990</a></li>
-<li><a href="schifano.html">VIII Chant des saisons de Schifanoia 1991</a></li>
-<li><a href="lourde.html">IX Lourde 1991</a></li>
-<li><a href="fini.html">X Fini 1991</a></li>
-<li><a href="rebrouss.html">XI Rebrousse temps 1991</a></li>
-<li><a href="guetteur.html">XII Guetteur 1992</a></li>
-<li><a href="cosmique.html">XIII Cosmique 1992</a></li>
-<li><a href="jardabim.html">XIV Jardin en abîme 1992</a></li>
-<li><a href="sousbois.html">XV Sous bois 1992</a></li>
-<li><a href="chronos.html">XVI Chronos 1992</a></li>
-<li><a href="sidesome.html">XVII Si de sommeil hanté 1992</a></li>
-<li><a href="alphabet.html">XVIII Alphabet 1992</a></li>
-<li><a href="sombre.html">Sombre voyage 1948</a></li>
-<li><a href="5 poems.html">5 poèmes 1961-1965</a></li>
-<li><a href="darkhair.html">Brune autant que hautaine 1961</a></li>
-<li><a href="blason.html">Blasonsecret 1965</a></li>
-<li><a href="ballade.html">Ballade 1966</a></li>
-<li><a href="ophir.html">Ophir 1980</a></li>
-<li><a href="ecuelle.html">L'écuelle brisée 1986</a></li>
-<li><a href="motinach.html">Le mot inachevé 1986</a></li>
-<li><a href="miroir.html">Miroir 1986</a></li>
-<li><a href="Firestones.html">Silex 1987</a></li>
-<li><a href="bonbourg.html">Bonheur bourgeois 1987</a></li>
-<li><a href="rencontr.html">Rencontre 1987</a></li>
-<li><a href="milliair.html">Milliaires</a></li>
-</ul>
-</div>
-<div class="english-column">
-<ul class="poem-list">
-<li><a href="mathiver.html">I Winter Morning</a></li>
-<li><a href="foresmar.html">II Emerald Forest</a></li>
-<li><a href="geode.html">III Geode</a></li>
-<li><a href="crucifix.html">IV Crucifixion</a></li>
-<li><a href="corpcris.html">V Crystal Body</a></li>
-<li><a href="corpeben.html">VI Ebony Body</a></li>
-<li><a href="ludovicu.html">VII Ludovicus Magnus</a></li>
-<li><a href="schifano.html">VIII Song of the Seasons of Schifanoia</a></li>
-<li><a href="lourde.html">IX Heaviness</a></li>
-<li><a href="fini.html">X Finish</a></li>
-<li><a href="rebrouss.html">XI Rubbing Up Time The Wrong Way</a></li>
-<li><a href="guetteur.html">XII Look-Out</a></li>
-<li><a href="cosmique.html">XIII Astronomer</a></li>
-<li><a href="jardabim.html">XIV Abysmal Garden</a></li>
-<li><a href="sousbois.html">XV Underwood</a></li>
-<li><a href="chronos.html">XVI Chronos</a></li>
-<li><a href="sidesome.html">XVII If Emerging from Sleep</a></li>
-<li><a href="alphabet.html">XVIII Alphabet</a></li>
-<li><a href="sombre.html">A Gloomy Trip</a></li>
-<li><a href="5 poems.html">5 poèmes 1961-1965</a></li>
-<li><a href="darkhair.html">Dark-haired, haughty lady</a></li>
-<li><a href="blason.html">Secret Blazon</a></li>
-<li><a href="ballade.html">A Ballad</a></li>
-<li><a href="ophir.html">Ophir</a></li>
-<li><a href="ecuelle.html">Beggar's bowl</a></li>
-<li><a href="motinach.html">Unfinished word</a></li>
-<li><a href="miroir.html">Mirror</a></li>
-<li><a href="Firestones.html">Firestones 1987</a></li>
-<li><a href="bonbourg.html">Middle class bliss</a></li>
-<li><a href="rencontr.html">Encounter</a></li>
-<li><a href="milliair.html">Milestones</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section-divider"></div>
-<div class="poem-section">
-<h1>In Memoriam</h1>
-<div class="bilingual-container">
-<div class="french-column">
-<h3>Ière Partie: de 1955 à 1978</h3>
-<ul class="poem-list">
-<li><a href="automne.html">I L'automne</a></li>
-<li><a href="prague.html">II Prague</a></li>
-<li><a href="desert.html">III Un Désert</a></li>
-<li><a href="enfant.html">IV Enfant</a></li>
-<li><a href="abeille.html">V Abeille</a></li>
-<li><a href="charity.html">VI Bal de bienfaisance</a></li>
-<li><a href="histoire.html">VII Histoire</a></li>
-<li><a href="cage.html">VIII La cage</a></li>
-<li><a href="teenager.html">IX L'adolescente</a></li>
-<li><a href="quietude.html">X Calme mois d'été</a></li>
-<li><a href="backhome.html">XI Vol de retour</a></li>
-<li><a href="neige.html">XII Neige</a></li>
-<li><a href="bruges.html">XIII Bruges</a></li>
-<li><a href="mai68.html">XIV Mai 68</a></li>
-<li><a href="age.html">XV Vieillesse</a></li>
-<li><a href="femmes.html">XVI Femmes</a></li>
-<li><a href="souvenir.html">XVII Souvenirs</a></li>
-<li><a href="colchide.html">XVIII Colchide</a></li>
-<li><a href="idylle.html">XIX Idylle</a></li>
-<li><a href="piednoir.html">XX Harkis</a></li>
-<li><a href="nantes.html">XXI Nantes</a></li>
-<li><a href="grandpar.html">XXII La maison des grands-parents</a></li>
-<li><a href="soufisme.html">XXIII Soufisme</a></li>
-<li><a href="alchimie.html">XXIV Alchimie</a></li>
-<li><a href="axel.html">XXV Axel</a></li>
-<li><a href="reve1.html">XXVI Rêve</a></li>
-</ul>
-<h3>IIème Partie: Oeuvres de Jeunesse</h3>
-<ul class="poem-list">
-<li><a href="tombeau.html">In Memoriam*</a></li>
-<li><a href="bateau.html">I Le bateau</a></li>
-<li><a href="soiree.html">II Soirée d'automne</a></li>
-<li><a href="labour.html">III Le laboureur</a></li>
-<li><a href="nixe.html">IV Lorelei</a></li>
-<li><a href="cygnes.html">V Les cygnes</a></li>
-<li><a href="lauriers.html">VI Les lauriers</a></li>
-<li><a href="6dames.html">VII Six dames</a></li>
-<li><a href="etoiles.html">VIII Aux étoiles</a></li>
-<li><a href="maisonma.html">IX La maison du matin</a></li>
-<li><a href="cloches.html">X Les cloches</a></li>
-<li><a href="nerval.html">XI Nerval</a></li>
-<li><a href="versaill.html">XII Versailles</a></li>
-<li><a href="matin.html">XIII Matin</a></li>
-<li><a href="figaro.html">XIV Les Noces de Figaro</a></li>
-<li><a href="passants.html">XV Passants</a></li>
-<li><a href="paris.html">XVI Paris</a></li>
-<li><a href="mirabeau.html">XVII Le Pont Mirabeau</a></li>
-<li><a href="fete.html">XVIII Fête foraine</a></li>
-<li><a href="boisrose.html">XIX Le Bois rose</a></li>
-<li><a href="dimanche.html">XX Dimanche</a></li>
-<li><a href="manteau.html">XXI Manteau de neige</a></li>
-</ul>
-<h3>IIIème Partie: Vers à onze pieds</h3>
-<ul class="poem-list">
-<li><a href="parfbois.html">I Parfum de bois</a></li>
-<li><a href="confins.html">II Confins</a></li>
-<li><a href="menade.html">III La Ménade</a></li>
-<li><a href="filledor.html">IV La fille d'or</a></li>
-<li><a href="murene.html">V La murène</a></li>
-<li><a href="mosquee.html">VI La mosquée</a></li>
-<li><a href="autocar.html">VII L'autocar</a></li>
-<li><a href="jarmin.html">VIII Le jardin minéral</a></li>
-<li><a href="citecrue.html">IX Ulysse à Montparnasse</a></li>
-<li><a href="licorne.html">X La licorne dans la cité</a></li>
-<li><a href="cite.html">XI Cité</a></li>
-<li><a href="obstetri.html">XII Obstétrique</a></li>
-<li><a href="montecri.html">XIII Monte-Cristo</a></li>
-<li><a href="chiffres.html">XIV Chiffres et lettres</a></li>
-<li><a href="origines.html">XV Retour aux origines</a></li>
-<li><a href="beaute.html">XVI Ineffable beauté</a></li>
-<li><a href="voyeur.html">XVII Le voyeur</a></li>
-<li><a href="thanka.html">XVIII Thanka</a></li>
-<li><a href="beaute2.html">XIX Beauté</a></li>
-<li><a href="arspoeti.html">XX Ars poetica</a></li>
-<li><a href="comfort.html">XXI Consolation</a></li>
-<li><a href="europe.html">XXII L'Europe et ses convulsions</a></li>
-<li><a href="marquete.html">XXIII Marqueterie</a></li>
-<li><a href="etranger.html">XXIV L'étranger</a></li>
-<li><a href="jumeau.html">XXV Le Jumeau</a></li>
-</ul>
-<p class="note-text">Titres ajoutés par le traducteur (sauf *)</p>
-</div>
-<div class="english-column">
-<h3>1st Part: from 1955 to 1978</h3>
-<ul class="poem-list">
-<li><a href="automne.html">I Autumn</a></li>
-<li><a href="prague.html">II Prague</a></li>
-<li><a href="desert.html">III A Desert</a></li>
-<li><a href="enfant.html">IV Child</a></li>
-<li><a href="abeille.html">V Honey-Bee</a></li>
-<li><a href="charity.html">VI Charity Ball</a></li>
-<li><a href="histoire.html">VII History</a></li>
-<li><a href="cage.html">VIII The Cage</a></li>
-<li><a href="teenager.html">IX The Teenager</a></li>
-<li><a href="quietude.html">X A Quiet Summer Month</a></li>
-<li><a href="backhome.html">XI Flying back home</a></li>
-<li><a href="neige.html">XII Snow</a></li>
-<li><a href="bruges.html">XIII Bruges</a></li>
-<li><a href="mai68.html">XIV May '68</a></li>
-<li><a href="age.html">XV Age</a></li>
-<li><a href="femmes.html">XVI Women</a></li>
-<li><a href="souvenir.html">XVII Memories</a></li>
-<li><a href="colchide.html">XVIII Colchis</a></li>
-<li><a href="idylle.html">XIX Romance</a></li>
-<li><a href="piednoir.html">XX Harkis</a></li>
-<li><a href="nantes.html">XXI Nantes</a></li>
-<li><a href="grandpar.html">XXII The Grandparents' House</a></li>
-<li><a href="soufisme.html">XXIII Sufism</a></li>
-<li><a href="alchimie.html">XXIV Alchemy</a></li>
-<li><a href="axel.html">XXV Axel</a></li>
-<li><a href="reve1.html">XXVI Dream</a></li>
-</ul>
-<h3>2nd Part: Early Works</h3>
-<ul class="poem-list">
-<li><a href="tombeau.html">In Memoriam*</a></li>
-<li><a href="bateau.html">I The Boat</a></li>
-<li><a href="soiree.html">II Autumn Evening</a></li>
-<li><a href="labour.html">III The Ploughman</a></li>
-<li><a href="nixe.html">IV Lorelei</a></li>
-<li><a href="cygnes.html">V The Swans</a></li>
-<li><a href="lauriers.html">VI The Laurels</a></li>
-<li><a href="6dames.html">VII Six Ladies</a></li>
-<li><a href="etoiles.html">VIII To the Stars</a></li>
-<li><a href="maisonma.html">IX The House of the Morning</a></li>
-<li><a href="cloches.html">X The Bells</a></li>
-<li><a href="nerval.html">XI Nerval</a></li>
-<li><a href="versaill.html">XII Versailles</a></li>
-<li><a href="matin.html">XIII Morning</a></li>
-<li><a href="figaro.html">XIV Figaro's Wedding</a></li>
-<li><a href="passants.html">XV Passers-by</a></li>
-<li><a href="paris.html">XVI Paris</a></li>
-<li><a href="mirabeau.html">XVII Mirabeau Bridge</a></li>
-<li><a href="fete.html">XVIII Fun Fair</a></li>
-<li><a href="boisrose.html">XIX The Pink Wood</a></li>
-<li><a href="dimanche.html">XX Sunday</a></li>
-<li><a href="manteau.html">XXI A Coat of Snow</a></li>
-</ul>
-<h3>3rd Part: Verses of Eleven Feet</h3>
-<ul class="poem-list">
-<li><a href="parfbois.html">I Fragrance of Forest</a></li>
-<li><a href="confins.html">II Boundaries</a></li>
-<li><a href="menade.html">III The Maenad</a></li>
-<li><a href="filledor.html">IV The Golden Maiden</a></li>
-<li><a href="murene.html">V The Moray</a></li>
-<li><a href="mosquee.html">VI The Mosque</a></li>
-<li><a href="autocar.html">VII Coach Journey</a></li>
-<li><a href="jarmin.html">VIII The Japanese Garden</a></li>
-<li><a href="citecrue.html">IX Ulysses in Montparnasse</a></li>
-<li><a href="licorne.html">X The Unicorn in the City</a></li>
-<li><a href="cite.html">XI City</a></li>
-<li><a href="obstetri.html">XII Obstetrics</a></li>
-<li><a href="montecri.html">XIII Monte-Cristo</a></li>
-<li><a href="chiffres.html">XIV Numbers and Letters</a></li>
-<li><a href="origines.html">XV Back to origins</a></li>
-<li><a href="beaute.html">XVI Unspeakable Beauty</a></li>
-<li><a href="voyeur.html">XVII Peeping Tom</a></li>
-<li><a href="thanka.html">XVIII Thanka</a></li>
-<li><a href="beaute2.html">XIX Beauty</a></li>
-<li><a href="arspoeti.html">XX Ars poetica</a></li>
-<li><a href="comfort.html">XXI Comfort</a></li>
-<li><a href="europe.html">XXII European Convulsions</a></li>
-<li><a href="marquete.html">XXIII Marquetry</a></li>
-<li><a href="etranger.html">XXIV The Stranger</a></li>
-<li><a href="jumeau.html">XXV The Twin Brother</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section-divider"></div>
-<div class="footer-section">
-<p><em>Translated by Christian Souchon with the kind help of Dr Klaus Engelhardt and Ms. Lois June Wickstrom.</em></p>
-<div class="external-links">
-<p>For other poems click on one of these links: D'autres poèmes sur ces sites:</p>
-<a href="https://www.poemhunter.com/michel-galiana/" target="_blank">https://www.poemhunter.com/michel-galiana/</a>
-<!-- <a href="http://poemsabout.com/poet/michel-galiana/page-1/" target="_blank">http://poemsabout.com/poet/michel-galiana/page-1/</a> -->
-<a href="https://www.poetbay.com/poetHome.php?writerId=2910" target="_blank">https://www.poetbay.com/poetHome.php?writerId=2910</a>
-</div>
-       <!--
-<div class="search-container">
-<h3 style="color: white; margin-bottom: 15px;">Recherche de poèmes - Search for poems</h3>
-<form action="http://search.freefind.com/find.html" class="search-form" method="GET" target="_self">
-<input name="id" type="hidden" value="89975524"/>
-<input name="pid" type="hidden" value="r"/>
-<input name="mode" type="hidden" value="ALL"/>
-<input name="n" type="hidden" value="0"/>
-<input name="query" placeholder="Enter search terms..." type="text"/>
-<input type="submit" value="Cherche - Go"/>
-</form>
-</div> -->
-<div class="home-link">
-<a href="https://chrsouchon.fr/index.html" target="_top">
-<img alt="Welcome Page" src="home1.gif"/>
-</a>
-</div>
-       <!--
-<div class="visitor-counter">
-<img alt="Counter" src="comptegaliana" style="vertical-align: middle;"/>
-                visites depuis le 29.01.10, selon <a href="http://www.digits.com/" style="color: #cccccc;">Web counter</a>
-<img alt="Counter icon" src="wc02.gif" style="vertical-align: middle;"/>
-</div>
-<p style="margin: 20px 0;">
-<strong><a href="mailto:chrsouchon@free.fr" style="color: white;">Mail: chrsouchon@free.fr</a></strong>
-</p> -->
-<p style="font-size: 0.8em; color: #cccccc;">
-                Last Updated: 13.05.2025
-            </p>
-</div> 
-</div>
-<script>
-        // Simple script to handle any dynamic functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Michel Galiana Poetry Index - Modern Version Loaded');
-            
-            // Add smooth scrolling for any internal links
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        });
-    </script>
+<h2> Milliary Columns</h2>
+
+<Table border width=100% cellpadding=4>
+<tr>
+<td bgcolor="blue" width=50% valign=top><strong>
+<a href="mathiver.html">I Matin d'hiver 1989</a><br>
+<a href="foresmar.html">II Forêt smaragdine 1990</a><br>
+<a href="geode.html">III Géode 1990</a><br>
+<a href="crucifix.html">IV Crucifixion 1990</a><br>
+<a href="corpcris.html">V Corps de cristal 1990</a><br>
+<a href="corpeben.html">VI Corps d'ébène 1990</a><br>
+<a href="ludovicu.html">VII Ludovicus Magnus 1990</a><br>
+<a href="schifano.html">VIII Chant des saisons de Schifanoia 1991</a><br>
+<a href="lourde.html">IX Lourde 1991</a><br>
+<a href="fini.html">X Fini 1991</a><br>
+<a href="rebrouss.html">XI Rebrousse temps 1991</a><br>
+<a href="guetteur.html">XII Guetteur 1992</a><br>
+<a href="cosmique.html">XIII Cosmique 1992</a><br>
+<a href="jardabim.html">XIV Jardin en abîme 1992</a><br>
+<a href="sousbois.html">XV Sous bois 1992</a><br>
+<a href="chronos.html">XVI Chronos 1992</a><br>
+<a href="sidesome.html">XVII Si de sommeil hanté 1992</a><br>
+<a href="alphabet.html">XVIII Alphabet 1992</a><br>
+<br>
+<a href="sombre.html">Sombre voyage 1948</a><br>
+<a href="5 poemes.html">5 poèmes 1961-1965</a><br>
+<a href="darkhair.html">Brune autant que hautaine 1961</a><br>
+<a href="blason.html">Blasonsecret 1965</a><br>
+<a href="ballade.html">Ballade 1966</a><br>
+<a href="ophir.html">Ophir 1980</a><br>
+<a href="ecuelle.html">L'écuelle brisée 1986</a><br>
+<a href="motinach.html">Le mot inachevé 1986</a><br>
+<a href="miroir.html">Miroir 1986</a><br>
+<a href="Firestones.html">Silex 1987</a><br>
+<a href="bonbourg.html">Bonheur bourgeois 1987</a><br>
+<a href="rencontr.html">Rencontre 1987</a><br>
+<a href="milliair.html">Milliaires</a><br>
+</td>
+
+<td width=50% bgcolor="blue" valign=top><strong>
+<a href="mathiver.html">I Winter Morning</a><br>
+<a href="foresmar.html">II Emerald Forest </a><br>
+<a href="geode.html">III Geode </a><br>
+<a href="crucifix.html">IV Crucifixion </a><br>
+<a href="corpcris.html">V Crystal Body </a><br>
+<a href="corpeben.html">VI Ebony Body</a><br>
+<a href="ludovicu.html">VII Ludovicus Magnus</a><br>
+<a href="schifano.html">VIII Song of the Seasons of Schifanoia</a><br>
+<a href="lourde.html">IX Heaviness </a><br>
+<a href="fini.html">X Finish</a><br>
+<a href="rebrouss.html">XI Rubbing Up Time The Wrong Way</a><br>
+<a href="guetteur.html">XII Look-Out</a><br>
+<a href="cosmique.html">XIII Astronomer</a><br>
+<a href="jardabim.html">XIV Abysmal Garden</a><br>
+<a href="sousbois.html">XV Underwood</a><br>
+<a href="chronos.html">XVI Chronos</a><br>
+<a href="sidesome.html">XVII If Emerging from Sleep</a><br>
+<a href="alphabet.html">XVIII Alphabet</a><br>
+<br>
+<a href="sombre.html">A Gloomy Trip</a><br>
+<a href="5 poemes.html">5 poems 1961-1965</a><br>
+<a href="darkhair.html">Dark-haired, haughty lady</a><br>
+<a href="blason.html">Secret Blazon</a><br>
+<a href="ballade.html">A Ballad</a><br>
+<a href="ophir.html">Ophir</a><br>
+<a href="ecuelle.html">Beggar's bowl</a><br>
+<a href="motinach.html">Unfinished word</a><br>
+<a href="miroir.html">Mirror </a><br>
+<a href="Firestones.html">Firestones 1987</a><br>
+<a href="bonbourg.html">Middle class bliss</a><br>
+<a href="rencontr.html">Encounter</a><br>
+<a href="milliair.html">Milestones</a><br>
+</td></tr>
+</table>
+<img src="bar_blue.gif"><br>
+<br>
+
+<h1>In Memoriam </h1>
+
+
+<Table border width=100% cellpadding=4>
+<tr>
+<td bgcolor="blue" width=50% valign=top><strong>
+<h2>Ière Partie: de 1955 à 1978</h2>
+<a href="automne.html">I L'automne</a><br>
+<a href="prague.html">II Prague</a><br>
+<a href="desert.html">III Un Désert</a><br>
+<a href="enfant.html">IV Enfant</a><br>
+<a href="abeille.html">V Abeille</a><br>
+<a href="charity.html">VI Bal de bienfaisance</a><br>
+<a href="histoire.html">VII Histoire</a><br>
+<a href="cage.html">VIII La cage</a><br>
+<a href="teenager.html">IX L'adolescente</a><br>
+<a href="quietude.html">X Calme mois d'été</a><br>
+<a href="backhome.html">XI Vol de retour</a><br>
+<a href="neige.html">XII Neige</a><br>
+<a href="bruges.html">XIII Bruges</a><br>
+<a href="mai68.html">XIV Mai 68</a><br>
+<a href="age.html">XV Vieillesse</a><br>
+<a href="femmes.html">XVI Femmes</a><br>
+<a href="souvenir.html">XVII Souvenirs</a><br>
+<a href="colchide.html">XVIII Colchide</a><br>
+<a href="idylle.html">XIX Idylle</a><br>
+<a href="piednoir.html">XX Harkis</a><br>
+<a href="nantes.html">XXI Nantes</a><br>
+<a href="grandpar.html">XXII La maison des grands-parents</a><br>
+<a href="soufisme.html">XXIII Soufisme</a><br>
+<a href="alchimie.html">XXIV Alchimie</a><br>
+<a href="axel.html">XXV Axel</a><br>
+<a href="reve1.html">XXVI Rêve</a><br>
+<br>
+<h2>IIème Partie: Oeuvres de Jeunesse</h2>
+<a href="tombeau.html"> In Memoriam*</a><br>
+<a href="bateau.html">I Le bateau</a><br>
+<a href="soiree.html">II Soirée d'automne</a><br>
+<a href="labour.html">III Le laboureur</a><br>
+<a href="nixe.html">IV Lorelei</a><br>
+<a href="cygnes.html">V Les cygnes</a><br>
+<a href="lauriers.html">VI Les lauriers</a><br>
+<a href="6dames.html">VII Six dames</a><br>
+<a href="etoiles.html">VIII Aux étoiles</a><br>
+<a href="maisonma.html">IX La maison du matin</a><br>
+<a href="cloches.html">X Les cloches</a><br>
+<a href="nerval.html">XI Nerval</a><br>
+<a href="versaill.html">XII Versailles</a><br>
+<a href="matin.html">XIII Matin</a><br>
+<a href="figaro.html">XIV Les Noces de Figaro</a><br>
+<a href="passants.html">XV Passants</a><br>
+<a href="paris.html">XVI Paris</a><br>
+<a href="mirabeau.html">XVII Le Pont Mirabeau</a><br>
+<a href="fete.html">XVIII Fête foraine</a><br>
+<a href="boisrose.html">XIX Le Bois rose</a><br>
+<a href="dimanche.html">XX Dimanche</a><br>
+<a href="manteau.html">XXI Manteau de neige</a><br>
+<br>
+<h2>IIIème Partie: Vers à onze pieds</h2>
+<a href="hendecapres.html"> Présentation de la III ème Partie</a><br>
+<br>
+<a href="eterchap.html">1° L'ETERNEL FEMININ</a><br>
+<br>
+<a href="parfbois.html"> I Parfum de bois</a><br>
+<a href="confins.html"> II Confins</a><br>
+<a href="menade.html"> III La Ménade</a><br>
+<a href="filledor.html"> IV La fille d'or</a><br>
+<br>
+<a href="exotchap.html">2° EXOTIQUES</a><br>
+<br>
+<a href="murene.html"> V La murène</a><br>
+<a href="mosquee.html"> VI La tombe du poète</a><br>
+<a href="autocar.html"> VII L'autocar</a><br>
+<a href="jarmin.html"> VIII Le jardin minéral</a><br>
+<br>
+<a href="villechap.html">3° IMPLACABLE VILLE</a><br>
+<br>
+<a href="citecrue.html"> IX Ulysse à Montparnasse</a><br>
+<a href="licorne.html"> X La licorne dans la cité</a><br>
+<a href="cite.html"> XI Cité</a><br>
+<br>
+<a href="naischap.html">4° NAISSANCE ET METAMORHOSE</a><br>
+<br>
+<a href="obstetri.html"> XII Obstétrique</a><br>
+<a href="montecri.html"> XIII Monte-Cristo</a><br>
+<a href="chiffres.html"> XIV Chiffres et lettres</a><br>
+<a href="origines.html"> XV Retour aux origines</a><br>
+<br>
+<a href="beauchap.html">5° BEAUTE ET EXTASE</a><br>
+<br>
+<a href="beaute.html"> XVI Ineffable beauté</a><br>
+<a href="voyeur.html"> XVII Le voyeur</a><br>
+<a href="thanka.html"> XVIII Thanka</a><br>
+<a href="beaute2.html"> XIX Beauté</a><br>
+<br>
+<a href="poetchap.html">6° POETIQUE ET DESTIN</a><br>
+<br>
+<a href="arspoeti.html"> XX Ars poetica</a><br>
+<a href="comfort.html"> XXI Consolation</a><br>
+<a href="europe.html"> XXII L'Europe et ses convulsions</a><br>
+<br>
+<a href="doubchap.html">7° DOUBLE ET ETRANGER</a><br>
+<br>
+<a href="marquete.html"> XXIII Marqueterie</a><br>
+<a href="etranger.html"> XXIV L'étranger</a><br>
+<a href="jumeau.html"> XXV Le Jumeau</a><br>
+<br>
+<i>Titres ajoutés par le traducteur (sauf *)<br>
+(Publié en juillet 1991)</i>
+</td>
+
+<td width=50% bgcolor="blue" valign=top><strong>
+<h2>Ist Part: from 1955 to 1978</h2>
+<a href="automne.html">I Autumn</a><br>
+<a href="prague.html">II Prague</a><br>
+<a href="desert.html">III A Desert</a><br>
+<a href="enfant.html">IV Child</a><br>
+<a href="abeille.html">V Honey-Bee</a><br>
+<a href="charity.html">VI Charity Ball</a><br>
+<a href="histoire.html">VII History</a><br>
+<a href="cage.html">VIII The Cage</a><br>
+<a href="teenager.html">IX The Teenager</a><br>
+<a href="quietude.html">X A Quiet Summer Month</a><br>
+<a href="backhome.html">XI Flying back home</a><br>
+<a href="neige.html">XII Snow</a><br>
+<a href="bruges.html">XIII Bruges</a><br>
+<a href="mai68.html">XIV May '68</a><br>
+<a href="age.html">XV Age</a><br>
+<a href="femmes.html">XVI Women</a><br>
+<a href="souvenir.html">XVII Memories</a><br>
+<a href="colchide.html">XVIII Colchis</a><br>
+<a href="idylle.html">XIX Romance</a><br>
+<a href="piednoir.html">XX Harkis</a><br>
+<a href="nantes.html">XXI Nantes</a><br>
+<a href="grandpar.html">XXII The Grandparents' House</a><br>
+<a href="soufisme.html">XXIII Sufism</a><br>
+<a href="alchimie.html">XXIV Alchemy</a><br>
+<a href="axel.html">XXV Axel</a><br>
+<a href="reve1.html">XXVI Dream</a><br>
+<br>
+<h2>IInd Part: Early Works</h2>
+<a href="tombeau.html"> In Memoriam*</a><br>
+<a href="bateau.html">I The Boat</a><br>
+<a href="soiree.html">II Autumn Evening</a><br>
+<a href="labour.html">III The Ploughman</a><br>
+<a href="nixe.html">IV Lorelei</a><br>
+<a href="cygnes.html">V The Swans</a><br>
+<a href="lauriers.html">VI The Laurels</a><br>
+<a href="6dames.html">VII Six Ladies</a><br>
+<a href="etoiles.html">VIII To the Stars</a><br>
+<a href="maisonma.html">IX The House of the Morning</a><br>
+<a href="cloches.html">X The Bells</a><br>
+<a href="nerval.html">XI Nerval</a><br>
+<a href="versaill.html">XII Versailles</a><br>
+<a href="matin.html">XIII Morning</a><br>
+<a href="figaro.html">XIV Figaro's Wedding</a><br>
+<a href="passants.html">XV Passers-by</a><br>
+<a href="paris.html">XVI Paris</a><br>
+<a href="mirabeau.html">XVII Mirabeau Bridge</a><br>
+<a href="fete.html">XVIII Fun Fair</a><br>
+<a href="boisrose.html">XIX The Pink Wood</a><br>
+<a href="dimanche.html">XX Sunday</a><br>
+<a href="manteau.html">XXI A Coat of Snow</a><br>
+<br>
+<h2>IIId Part: Verses of Eleven Feet</h2>
+
+<a href="hendecapres.html"> Overview of the Third Part</a><br>
+<br>
+<a href="eterchap.html">1° THE ETERNAL FEMININE</a><br>
+<br>
+<a href="parfbois.html"> I Fragrance of Forest</a><br>
+<a href="confins.html"> II Boundaries</a><br>
+<a href="menade.html"> III The Maenad</a><br>
+<a href="filledor.html"> IV The Golden Maiden</a><br>
+<br>
+<a href="exotchap.html">2° EXOTISM</a><br>
+<br>
+<a href="murene.html"> V The Moray</a><br>
+<a href="mosquee.html"> VI The Poet's Tomb</a><br>
+<a href="autocar.html"> VII Coach Journey</a><br>
+<a href="jarmin.html"> VIII The Japanese Garden</a><br>
+<br>
+<a href="villechap.html">3° THE IMPLACABLE CITY</a><br>
+<br>
+<a href="citecrue.html"> IX Ulysses in Montparnasse</a><br>
+<a href="licorne.html"> X The Unicorn in the City</a><br>
+<a href="cite.html"> XI City</a><br>
+<br>
+<a href="naischap.html">4° BIRTH AND METAMORPHOSIS</a><br>
+<br>
+<a href="obstetri.html"> XII Obstetrics</a><br>
+<a href="montecri.html"> XIII Monte-Cristo</a><br>
+<a href="chiffres.html"> XIV Numbers and Letters</a><br>
+<a href="origines.html"> XV Back to origins</a><br>
+<br>
+<a href="beauchap.html">5° BEAUTY AND ECSTASY</a><br>
+<br>
+<a href="beaute.html"> XVI Unspeakable Beauty</a><br>
+<a href="voyeur.html"> XVII Onlooker</a><br>
+<a href="thanka.html"> XVIII Thanka</a><br>
+<a href="beaute2.html"> XIX Beauty</a><br>
+<br>
+<a href="poetchap.html">6° POETICS AND DESTINY</a><br>
+<br>
+<a href="arspoeti.html"> XX Ars poetica</a><br>
+<a href="comfort.html"> XXI Comfort</a><br>
+<a href="europe.html"> XXII European Convulsions</a><br>
+<br>
+<a href="doubchap.html">7° THE DOUBLE AND THE STRANGER</a><br>
+<br>
+<a href="marquete.html"> XXIII Marquetry</a><br>
+<a href="etranger.html"> XXIV The Stranger</a><br>
+<a href="jumeau.html"> XXV The Twin Brother</a><br>
+<br>
+<i>Titles added by the translator (except *)<br> 
+(Published in juillet 1991)</i>
+</td>
+</tr>
+</table>
+<img src="bar_blue.gif"><br>
+<br>
+<i> Translated by Christian Souchon with the kind help of Dr Klaus Engelhardt and Ms. Lois June Wickstrom.</i><br><br>
+For other poems click on one of these links:   D'autres poèmes sur ces sites:<br>
+<a href="http://www.poemhunter.com/michel-galiana/"> http://www.poemhunter.com/michel-galiana/</a> <br>
+<a href="http://poemsabout.com/poet/michel-galiana/page-1/"> http://poemsabout.com/poet/michel-galiana/page-1/</a><br>
+<a href="http://www.poetbay.com/poetHome.php?writerId=2910">http://www.poetbay.com/poetHome.php?writerId=2910</a>
+<br>
+
+<UL><LI><h5><a href="mailto:chrsouchon@free.fr">Mail:chrsouchon@free.fr</a></h5></UL> 
+<small><IMG SRC="http://counter.digits.com/wc/-d/4/comptegaliana" ALIGN=middle
+      WIDTH=30 HEIGHT=10 BORDER=0 HSPACE=2 VSPACE=1>visites depuis le 29.01.10, selon <A HREF="http://www.digits.com/">Web counter</A> <IMG SRC="wc02.gif" WIDTH=15 HEIGHT=4 BORDER=0 VSPACE=0 HSPACE=0></A><br>
+<br>
+
+<table border="1" cellpadding="0" width="300" style="border-collapse: collapse" bordercolor="blue" bordercolorlight="blue" bordercolordark="blue" bgcolor="blue">
+<FORM ACTION="http://search.freefind.com/find.html" METHOD="GET" target="_self"><div align="left">
+<tr>	<td><p align="center">
+	<b><font face="Arial" color="white" size="2">Recherche de poèmes - Search for poems</font></b>
+	</td>
+        	
+</tr>
+<tr>
+	<td><p align="center"><font face="Arial">
+<INPUT TYPE="HIDDEN" NAME="id" VALUE="89975524">
+<INPUT TYPE="HIDDEN" NAME="pid" VALUE="r">
+<INPUT TYPE="HIDDEN" NAME="mode" VALUE="ALL"> 
+<INPUT type="HIDDEN" name="n" value="0">
+<INPUT TYPE="TEXT" NAME="query" SIZE="20">
+<INPUT TYPE="SUBMIT" VALUE="Cherche -Go">
+</font></FORM>
+</td></tr>
+</table><br><br>
+<a href="../homepage.html" target="_top" alt="Welcome Page"><img src="home1.gif"></a><br>
+<center>
+<script language="JavaScript" src="maj.js"></script>
+<script language="JavaScript">maj()</script>
 </body>
 </html>
